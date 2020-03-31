@@ -61,7 +61,7 @@ You should notice that Mbappe still exists within `Liverpool.txt` however, the c
 
 ## --SOFT
 
-Due to the nature of this crashcourse focusing on parts of Git that you will regularly use, we won't cover an example of a --SOFT reset.
+Due to the nature of this crash course focusing on parts of Git that you will regularly use, we won't cover an example of a --SOFT reset.
 
 ## Commands you have learned this module!
 

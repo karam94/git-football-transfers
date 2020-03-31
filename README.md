@@ -2,7 +2,7 @@
 
 This repository contains a number of activities to help learn a handful of Git concepts, by taking control of an imaginary football transfer window!
 
-Part of a **pragmatic** crashcourse I am building to help software developers learn Git. The reason why I focus on pragmatism is because I believe it's less important for developers to become so-called Git experts as most courses aim to cover and instead focus on a leaner approach to get developers comfortable with Git, focusing on the areas which will be more prominent throughout their day to day roles.
+Part of a **pragmatic** crash course I am building to help software developers learn Git. The reason why I focus on pragmatism is because I believe it's less important for developers to become so-called Git experts as most courses aim to cover and instead focus on a leaner approach to get developers comfortable with Git, focusing on the areas which will be more prominent throughout their day to day roles.
 
 The tasks will revolve around playing God, in today's hectic football transfer market.
 
@@ -25,7 +25,7 @@ The tasks will revolve around playing God, in today's hectic football transfer m
 
 If you do not have Git installed, follow this guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-These terms will be referred to within the crashcourse, so it's important you have a rough idea what they mean.
+These terms will be referred to within the crash course, so it's important you have a rough idea what they mean.
 If you still feel confused, they'll make more sense as you go through the different modules.
 
 - Git is made up of three different levels:
