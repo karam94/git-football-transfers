@@ -6,11 +6,13 @@
 
 ### Pushing
 
-Open `PremierLeague.txt` and change the current champions to Liverpool.
+Open `PremierLeague.txt` in however way you see fit and change the current champions to `Liverpool`.
 
 Now type `git status`. You will see that git is telling you that the file has been modified.
 
-Now create a new file called `SerieA.txt` and type `git status`. You will see that git is telling you that a new file has also been added.
+Now create a new file called `SerieA.txt` and type `git status`. You will see that git is telling you that a new file has also been added and is untracked.
+
+`PremierLeague.txt` is tracked because the Git repository knows about it. Meanwhile `SerieA.txt` is a brand new file which the Git repository has never seen before.
 
 ```bash
 git status
@@ -29,13 +31,13 @@ Untracked files:
         SerieA.txt
 ```
 
-Open `SerieA.txt` and add write a line inside.
+Open `SerieA.txt` and add a line inside.
 
-Now type `git diff`. What do you think this command does?
+Now type `git diff`. What do you think this command is doing?
 
 You can add files to be tracked using the `git add` command.
 
-You can either specifically say `git add SerieA.txt` in this case or `git add .` which will add any untracked files within the root of your current directory.
+You can either specifically say `git add SerieA.txt` in this case or `git add .` which will add any untracked files within the root of your current directory like a wildcard.
 
 Try doing this and then run a `git status` again.
 
@@ -63,11 +65,11 @@ Be careful when using git reset. We will look at this command and alternatives i
 
 Notice your `PremierLeague.txt` file has now been reset back to contain Manchester City as the champions.
 
-Also note that whilst `SerieA.txt` has not been removed physically from your drive, it is now untracked and unknown to the local Git repository again.
+Also note that whilst `SerieA.txt` has not been removed physically from your drive, it is now untracked and unknown to the Git repository again.
 
 ## Ammending
 
-If you made a mistake to a commit prior to pushing it, you can use the `git commit --amend` command.
+If you made a mistake with a commit prior to pushing it, you can use the `git commit --amend` command.
 
 ## Commands you have learned this module!
 
