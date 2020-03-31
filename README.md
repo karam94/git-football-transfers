@@ -1,12 +1,12 @@
 # git-football-transfers
 
-This repository contains a number of activities to help learn a handful of Git concepts, by taking control of an imaginary football transfer window!
+This repository contains a number of activities to help you learn a handful of Git concepts, through taking control of an imaginary football transfer window!
 
-Part of a **pragmatic** crash course I am building to help software developers learn Git. The reason why I focus on pragmatism is because I believe it's less important for developers to become so-called Git experts as most courses aim to cover and instead focus on a leaner approach to get developers comfortable with Git, focusing on the areas which will be more prominent throughout their day to day roles.
+This is a **pragmatic** crash course. Rather than focusing on teaching as many Git commands as possible, it focuses on a leaner approach that covers most commands used prominently day in, day out.
 
 The tasks will revolve around playing God, in today's hectic football transfer market.
 
-## Proposed Topics
+## Current Topics
 
 - Visualising a repository.
 - Branches, pulling & checking out code.
@@ -21,12 +21,15 @@ The tasks will revolve around playing God, in today's hectic football transfer m
 - Trunk Based Development.
 - Recommended Git/Source Control GUIs.
 
-## Pre-requisites (READ ME)
+## Pre-requisites
+
+This crash course expects you to already be familiar with the basics of source control.
 
 If you do not have Git installed, follow this guide: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-These terms will be referred to within the crash course, so it's important you have a rough idea what they mean.
-If you still feel confused, they'll make more sense as you go through the different modules.
+The below terms will be referred to on numerous occasion within the crash course, so it's important you have a rough idea what they mean.
+
+If you still feel confused, they'll make more sense as you go through the different modules. If not, refer back to them here and they will start to contextually make sense.
 
 - Git is made up of three different levels:
   - Your Working Directory
