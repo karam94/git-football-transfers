@@ -8,7 +8,7 @@
 
 Create a third football team within this folder, `Chelsea.txt`.
 
-It is now in what is called your Git working area.
+It is now in your Git working area and is therefore untracked as it is a new file.
 
 ```bash
 git status
@@ -21,9 +21,9 @@ Untracked files:
         Chelsea.txt
 ```
 
-Do `git add .` to move it in to what is called your Git index.
+Do `git add .` to move it in to your Staging Index.
 
-It is now ready to be committed to your local Git repository and then pushed to the remote repository.
+It is now ready to be committed to your local Git Repository and then pushed to the Remote Repository.
 
 ```bash
 git status
@@ -36,7 +36,7 @@ Changes to be committed:
         new file:   Chelsea.txt
 ```
 
-However, it turns out that we wanted to add Manchester United instead!
+However, it turns out that we wanted to actually add Manchester United instead! D'oh!
 
 Unfortunately we have already run a `git add .` so if we just locally deleted the file, we would end up needing to do another `git add .` because our Git repository thinks it is now missing a file.
 
@@ -69,7 +69,7 @@ Untracked files:
         Chelsea.txt
 ```
 
-As you can see, the file is now untracked again. The command we ran, reversed adding the file to the index from the working area which we did earlier using the `git add .` command.
+As you can see, the file is now untracked again. The command we ran, reversed adding the file to the Staging Index from the Working Area which we did earlier.
 
 You can now delete the file using the command `rm Chelsea.txt`.
 
@@ -79,11 +79,11 @@ Let's now create that ManchesterUnited.txt file.
 
 You can proceed to `git add .` it and `git commit -m "Added Manchester United"` it.
 
-Oh no. It turns out we actually wanted should've added Arsenal.
+Oh no. It turns out we actually wanted should've added Arsenal. D'oh!
 
 How can we now revert our commit?
 
-Remember when we visualised our repository earlier in this crash course? Well, if we want to revert a commit, we need the hash of that commit so we know how to refer to it... `git log`.
+Remember when we visualised our repository earlier in this crash course? Well, if we want to revert a commit, we need the hash of that commit so we know how to refer back to it... `git log`.
 
 Now that you have the hash of the commit you want to reverse, simply do `git revert HASH`. This will create a new commit, that will do the exact opposite of what your last commit did.
 
