@@ -1,6 +1,6 @@
 # git-football-transfers
 
-This repository contains a number of activities to help learn advanced Git concepts, by taking control of the football transfer window!
+This repository contains a number of activities to help learn a handful of Git concepts, by taking control of an imaginary football transfer window!
 
 Part of a **pragmatic** crashcourse I am building to help software developers learn Git. The reason why I focus on pragmatism is because I believe it's less important for developers to become so-called Git experts as most courses aim to cover and instead focus on a leaner approach to get developers comfortable with Git, focusing on the areas which will be more prominent throughout their day to day roles.
 
@@ -28,17 +28,18 @@ If you do not have Git installed, follow this guide: https://git-scm.com/book/en
 These terms will be referred to within the crashcourse, so it's important you have a rough idea what they mean.
 If you still feel confused, they'll make more sense as you go through the different modules.
 
-- Git is made up of three (or four) different levels:
+- Git is made up of three different levels:
   - Your Working Directory
-    - These are your local files, on your local machine which you can make modifications to.
-    - Modified or new files at this point are considered untracked by the Git repository.
+    - These are your local files, on your local machine which you can make modifications to. Basically, it is where you are currently working.
+    - Modified or new files at this point are considered untracked by the Git repository. This means that despite your changes, they are not saved yet to the Git repository.
   - The Staging Index
     - This is the staging area between your Working Directory & Local Repository.
-    - This is basically where untracked files become tracked files when you do a `git add`.
-  - The Local/Remote Repository
-    - This is the `.git` folder within your Working Directory and contains a record of the current repository files and project history such as commits, trees, blobs, etc.
-    - If your repository has a `remote` set, this could be a GitHub repository, for example.
-    - Files move from the Index to the Local Repository after doing a `git commit`.
+    - This is where untracked files become tracked files once you do a `git add`.
+    - Once files become tracked, the Git repository starts to care about them and they are ready to be pushed to the Git repository.
+  - The Local Repository
+    - This is the `.git` folder within your Working Directory and contains a record of the current repository files and project history such as commits, trees, blobs, etc. It is a hidden folder, so to see it, enable hidden folders on your machine.
+    - If your repository has a `remote` set, this will be a reference to a remote repository such as a GitHub repository or Bitbucket repository, for example.
+    - Files move from the Staging Index to the Local Repository after doing a `git commit`.
     - They then move to the Remote Repository after doing a `git push` if a `remote` is set.
 
 ## Commands covered throughout the crash course
