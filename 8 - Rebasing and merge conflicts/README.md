@@ -4,6 +4,8 @@
 
 ### NOTE: For this section, perform all commands from within the "8 - Rebasing and merge conflicts" folder.
 
+![Rebase Branch](RebaseBranch.png?raw=true)
+
 ### Rebasing
 
 Rebasing aims to solve the same problem that merging does which we covered in the previous module, but in a different way.
