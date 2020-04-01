@@ -4,7 +4,7 @@
 
 ### NOTE: For this section, perform all commands from within the "7 - Merging and merge conflicts" folder.
 
-![Merge Branch]("MergeBranch.png?raw=true")
+![Merge Branch](MergeBranch.png?raw=true)
 
 ### Merging
 
