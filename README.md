@@ -6,6 +6,8 @@ This is a **pragmatic** crash course. Rather than focusing on teaching as many G
 
 The tasks will revolve around playing God, in today's hectic football transfer market.
 
+**Note:** Upon completion of every chapter, please execute a `git reset --hard`.
+
 ## Current Topics
 
 - Visualising a repository.
