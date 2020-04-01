@@ -6,9 +6,9 @@
 
 ### Merging
 
-Merging quite simply, is when changes made to files on one branch now need to be integrated in to another branch.
+Merging is when changes made to files on one branch need to be integrated/brought in to another branch.
 
-For example, if a development team uses feature branches, this means that prior to developing a feature, they create a branch off master where they make and commit their changes to. Imagine master as the branch that represents the codebase in production.
+For example, if a development team uses feature branches, this means that prior to developing a feature, they create a branch based off master where they make and commit their changes to. Imagine master as the branch that represents the codebase in production.
 
 Once the work is done and tested, that feature branch then has to be merged back in to the master branch so that it can be deployed to production.
 
@@ -16,7 +16,7 @@ This is merging.
 
 ### Merge Conflicts
 
-Due to the nature of software development, it isn't uncommon for changes to be made to the same files on occasion within two branches.
+Due to the nature of software development, it isn't uncommon for changes to be made to the same files on occasion within two branches or by more than one developer at the same time.
 
 Let's assume we have two reporters on football transfers. Alice & Bob.
 
@@ -24,15 +24,17 @@ Alice receives information that Manchester City have just signed Pogba and there
 
 Bob has meanwhile also received information that Manchester City have just signed Lewandowski and therefore adds him to `ManchesterCity.txt` on `line 4`, on his feature branch.
 
+Can you see where this is going? Hint: `line 4`
+
 Alice stages, commits and pushes her change to the master branch.
 
-Bob a couple of hours later, decides to do the same. However is unable to do so. Can you guess why?
+Bob a couple of minutes later, decides to do the same. However is unable to do so. Can you guess why?
 
-Firstly, Bob will have to pull down the latest iteration of the master branch, if he is to push his changes to it.
+Firstly, Bob will have to pull down the latest iteration of the master branch, to be able push his own changes to it.
 
-Secondly, Bob has encountered a merge conflict. This is because both himself and Alice, have modified the same line of what would usually be code.
+Secondly, Bob has encountered a merge conflict. This is because both himself and Alice, have modified the same line of what would usually be code. Git is useful because it is warning Bob to make sure he doesn't overwrite something he shouldn't!
 
-Bob deals with the merge conflict, by moving his change to `line 5`. This then creates a merge commit that he can push.
+Bob solves the merge conflict, by moving his change to `line 5`. This then creates a merge commit that he can push.
 
 This merge conflict was an easy fix, however with real source code, if two peoples changes overlap, extra care has to be taken to ensure that the merged output has not negatively impacted the output of the new code structure within the file once executed.
 
@@ -40,13 +42,13 @@ This merge conflict was an easy fix, however with real source code, if two peopl
 
 Pretend you are Alice. Create your new feature branch `git checkout -b Alice` and your current branch should automatically switch. If not, use `git switch Alice`.
 
-Add Pogba to `ManchesterCity.txt` and stage and commit your changes using `git add .` followed by `git commit -m "Add Pogba to Manchester City"`.
+Add Pogba to `ManchesterCity.txt`, stage and commit your changes using `git add .` followed by `git commit -m "Add Pogba to Manchester City"`.
 
-Now pretend you are Bob. Switch back to the master branch using `git switch master`. Create your new feature branch `git checkout -b Bob` and your current branch should automatically switch. If not, use `git switch Bob`.
+Now pretend you are Bob. Switch back to the master branch using `git switch master`. Create your new feature branch based off master using `git checkout -b Bob`. Again, your current branch should automatically switch. If not, use `git switch Bob`.
 
 Add Lewandowski to `ManchesterCity.txt` - notice Pogba is no longer in the file here, as Bob's branch is based on the master branch - and as before, `git add .` followed by `git commit -m "Add Lewandowski to Manchester City"`.
 
-You are now Alice again and now want to integrate your changes in to the master branch by merging your Alice branch in to master.
+You are now Alice again and now want to integrate your changes (Alice branch) in to the master branch by merging your Alice branch in to master.
 
 Switch back to the master branch using `git checkout master` and now run `git merge Alice`. This should merge successfully. You can confirm this by seeing if Pogba is in `ManchesterCity.txt` on your master branch. You can delete Alice's branch which is now obsolete as it has now been merged in using `git branch -d Alice`.
 
