@@ -8,23 +8,25 @@
 
 Rebasing aims to solve the same problem that merging does which we covered in the previous module, but in a different way.
 
-Unlike in a traditional merge where two branches are brought together and a merge conflict is manually solved by an individual, to create a merge commit to unite both branches, rebasing instead takes a sequential approach.
+Unlike in a traditional merge where two branches are brought together and a merge conflict is manually solved by an individual, to create a merge commit which unites both branches, rebasing instead takes a replay-sequential approach.
 
-The rebase sequentially goes through the new commits on the branch being merged in, commit by commit and tries to automatically replay them on top of the master branch being merged in to. Where manual intervention is required due to a conflict for a particular commit, a conflict can be solved.
+The rebase sequentially goes through the new commits on the branch being merged in, commit by commit and tries to automatically replay them on top of the master branch that is being merged in to. Where manual intervention is required due to a conflict for a particular commit, a conflict can be solved.
 
-Once the commits from the branch being merged in have all been applied on top of the master branch being merged in to, the rebase is completed and the merge is complete.
+Once the commits from the branch being merged in, have all been applied on top of the master branch being merged in to, the rebase is completed and thus the merge is complete.
 
 The main difference here between a traditional merge and a rebase is that a rebase is a destructive action, as it involves rewriting history. The commits being rebased on top of the master branch are artificial, unlike a merge which preserves the original commits on the feature branch and instead brings them all in on top of master with a single merge commit.
 
-The advantage of rebasing over merging is that one gets a cleaner and prettier overall git log graph as it looks like all changes to master, happened sequentially, in perfection, as if no merge conflicts ever happened.
+The advantage of rebasing over merging is that one gets a cleaner and prettier overall git log graph, as it looks like all changes to master, happened sequentially, in perfect timing, as if no merge conflicts ever happened.
 
-Using rebasing over merging is a controversial topic and is frowned upon in common Git workflows such as Gitflow.
+Using rebasing over merging is a controversial topic however and is frowned upon in common Git workflows such as Gitflow.
+
+We'll look at one of the most controversial things rebasing does, which is rewriting history, in the next chapter.
 
 ### Simulating a Rebase with Merge Conflicts
 
 Pretend you are Alice. Create your new feature branch `git checkout -b Alice` and your current branch should automatically switch. If not, use `git switch Alice`.
 
-Add Hazard to `ManchesterCity.txt` and stage and commit your changes using `git add .` followed by `git commit -m "Add Hazard to Manchester City"`.
+Add Hazard to `ManchesterCity.txt`, stage and commit your changes using `git add .` followed by `git commit -m "Add Hazard to Manchester City"`.
 
 Now add Messi to `ManchesterCity.txt` and commit your changes using `git commit -m "Add Messi to Manchester City"`.
 
@@ -44,7 +46,7 @@ Fast-forward
  1 file changed, 1 insertion(+)
 ```
 
-You are now Alice again by doing `git checkout Alice` and now want to integrate your changes in to the master branch by rebasing master on to your Alice branch.
+You are now Alice again by doing `git checkout Alice` and now want to integrate your changes in to the master branch by rebasing master on to your Alice branch. Bob merged on to master in the previous step. Alice is now going to rebase on to master.
 
 ```bash
 git checkout Alice
@@ -106,7 +108,7 @@ git rebase --continue
 Applying: Added Messi
 ```
 
-The rebase is now complete. Alice's branch is now the latest version of master (which included Bob's change) plus, a replay of Alice's commits on top. This means Alice's branch will now be really easy to merge in to master with no conflicts because the only differences after the rebase are now Alice's commits, directly on top.
+The rebase is now complete. Alice's branch is now equivalent to the latest version of master (which included Bob's change) plus, a replay of her (Alice's) commits directly on top. This means Alice's branch will now be really easy to merge in to master with no conflicts because the only differences after the rebase are now Alice's commits, directly on top.
 
 `git checkout master` and `git merge Alice` will merge in Alice's branch to master.
 

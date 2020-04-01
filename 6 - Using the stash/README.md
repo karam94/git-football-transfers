@@ -6,11 +6,11 @@
 
 ### Stashing
 
-The stash is a storage area within a git repository. It exists for convenience to allow us to temporarily stash/save work and pick it up again later.
+The stash is a storage area within a Git repository. It exists for convenience to allow us to temporarily stash/save work and pick it up again later.
 
-Create a file called `Arsenal.txt` and run `git stash --include-untracked`.
+Create a file called `Arsenal.txt` and run `git stash --include-untracked`. Can you guess what the `--include-untracked` flag does?
 
-Now run `git stash list`. Here you will see the stash that has been created along with a number that represents it. Copy that hash.
+Now run `git stash list`. Here you will see the stash that has been created along with a number that represents it, we'll refer to this as `STASH_NUMBER`. Copy that hash.
 
 Your changes with the new `Arsenal.txt` file have been stashed.
 
