@@ -33,6 +33,8 @@ The below terms will be referred to on numerous occasion within the crash course
 
 If you still feel confused, they'll make more sense as you go through the different modules. If not, refer back to them here and they will start to contextually make sense.
 
+![Git Levels](GitDiagram.png?raw=true)
+
 - Git is made up of three different levels:
   - Your Working Directory
     - These are your local files, on your local machine which you can make modifications to. Basically, it is where you are currently working.
