@@ -4,6 +4,8 @@
 
 ### NOTE: For this section, perform all commands from within the "7 - Merging and merge conflicts" folder.
 
+![Merge Branch]("MergeBranch.png?raw=true")
+
 ### Merging
 
 Merging quite simply, is when changes made to files on one branch now need to be integrated in to another branch.
