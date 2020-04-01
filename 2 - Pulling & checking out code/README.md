@@ -32,6 +32,8 @@ If you now do a `git pull` (which won't make a difference as nothing has changed
 
 ### Branches
 
+![Feature Branch](FeatureBranch.png?raw=true)
+
 All code repositories will have at least one branch, often referred to as the master branch.
 
 Branches are independant copies of a repository which developers might make changes to and work on independently as discussed previously.
