@@ -50,6 +50,8 @@ Fast-forward
 
 You are now Alice again by doing `git checkout Alice` and now want to integrate your changes in to the master branch by rebasing master on to your Alice branch. Bob merged on to master in the previous step. Alice is now going to rebase on to master.
 
+Whilst on the Alice branch, execute `git rebase master`. This will open up your favourite text editor and replay the Hazard commit.
+
 ```bash
 git checkout Alice
 git rebase master
@@ -69,7 +71,7 @@ You can instead skip this commit: run "git rebase --skip".
 To abort and get back to the state before "git rebase", run "git rebase --abort".
 ```
 
-Whilst on the Alice branch, execute `git rebase master`. This will open up your favourite text editor and replay the Hazard commit.
+Once fixed, do a `git add .` to mark the merge conflict as resolved and then do `git rebase --continue` and continue the rebase by replaying the next commit, which is the Messi commit.
 
 ```text
 Aguero
@@ -83,8 +85,6 @@ Suarez
 Hazard
 >>>>>>> Added Hazard
 ```
-
-Once fixed, do a `git add .` to mark the merge conflict as resolved and then do `git rebase --continue` and continue the rebase by replaying the next commit, which is the Messi commit.
 
 Unfortunately we get a merge conflict again, because we solved the previous one by adding Hazard on to the line after Suarez, which is where we added Messi in this commit we are now replaying as part of the rebase.
 
